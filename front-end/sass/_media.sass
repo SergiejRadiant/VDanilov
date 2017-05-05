@@ -4,17 +4,89 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	header.main-header
+		.header-footer
+			.main-nav
+				padding-bottom: 46px
+				ul
+					li
+						margin-right: 25px
+	footer.main-footer
+		.copyright
+			p
+				font-size: 13px
+				line-height: 14px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	header.main-header
+		.header-footer
+			.main-nav
+				padding-bottom: 46px
+				ul
+					li
+						margin-right: 14px
+						a
+							font-size: 17px
+							line-height: 17px
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+	header.main-header
+		.toggle-mnu
+			display: block
+		.logo
+			margin-right: auto
+		.contact-wrap
+			text-align: left
+			.contact
+				display: block
+				text-align: left
+		.logo
+			.svg-wrapper
+				width: 86px
+				height: 86px
+			p
+				font-size: 16px
+				line-height: 16px
+				+kerning(1.8)
+				&.name
+					font-size: 30px
+					line-height: 31px
+		.header-footer
+			.main-nav
+				display: none
+	section.services
+		.service
+			margin-left: auto
+			margin-right: auto
+			width: 100%
+			max-width: 100%
+	section.text-section
+		h1
+
+		img
+			float: none
+			width: 100%
+			margin-top: 0
+			margin-left: 0
+			margin-bottom: 20px
+	footer.main-footer
+		padding-top: 0
+		h3
+			border-bottom: 1px solid #dee1e3
+			padding-bottom: 5px
+			margin-bottom: 23px
+			margin-top: 28px
+		.developers
+			position: relative
+			font-size: 14px
+			line-height: 15px
+			margin-top: 10px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -36,12 +108,47 @@
 		-ms-animation: none !important
 		animation: none !important
 
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 
-
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	header.main-header
+		.logo
+			margin-right: auto
+			display: block
+			text-align: center
+			.img,
+			.text
+				display: block
+				padding-left: 0
+			.img
+				display: inline-block
+				margin-bottom: 10px
+		.contact-wrap
+			text-align: center
+			.contact
+				display: block
+				text-align: center
+				margin-top: 20px
+				.std-btn
+					margin-left: auto
+					margin-right: auto
+		.header-footer
+			.main-slider
+				.item
+					.inner-container
+						.context
+							.text
+								width: 100%
+								padding: 11px 15px 13px 15px
+								p
+									font-size: 18px
+									line-height: 24px
+									font-family: "Exo2extralightcondensed",sans-serif
+									padding: 0px
+									margin: 0px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

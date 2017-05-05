@@ -25,10 +25,321 @@ body textarea:required:valid
 	color: #666
 
 //Custom Styles Here
+.row-flex
+	display: flex
+	flex-flow: row wrap
 
+.mobile-menu-btn
+	color: #fff
+	position: relative
+	width: 52px
+	height: 54px
+	display: inline-block
+	vertical-align: middle
+	position: absolute
+	right: 5px
+	top: -14px
+
+
+.toggle-mnu
+	width: 52px
+	height: 54px
+	position: absolute
+	z-index: 3
+	top: 2px
+	right: 0
+	border: none
+	background-color: transparent
+	&:hover
+		.sandwich 
+			.sw-topper,
+			.sw-bottom,
+			.sw-footer
+				background: $main-color-h
+
+
+.sandwich 
+	display: block
+	width: $w
+	height: $w
+	position: absolute
+	top: 0px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 3
+.sw-topper
+	display: block
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: $main-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.5s, background .5s ease
+.sw-bottom
+	display: block
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 1.5
+	background: $main-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.5s, background .5s ease
+	
+.sw-footer
+	display: block
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 3.5
+	background: $main-color
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: top 0.5s, background .5s ease
+
+.sandwich.active 
+	top: -6px
+	.sw-topper
+ 		top: 9px
+ 		transform: rotate(-45deg)
+ 		background: $main-color
+	.sw-bottom
+ 		top: 6px
+ 		transform: rotate(45deg)
+ 		background: $main-color
+	.sw-footer
+ 		opacity: 0
+ 		top: 0
+ 		transform: rotate(180deg)
+ 		background: $main-color
+
+body
+	.mm-menu.mm-offcanvas
+			z-index: 10
 
 //ALWAYS END
 @import "media"
+@import "app/libs/font-awesome/css/font-awesome.min"
+@import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
+@import "app/libs/font-awesome/css/font-awesome.min"
 
-//Load Libs SASS
-@import "app/libs/animate/animate.sass"
+.services
+	background-color: #dee1e3
+	padding-top: 22px
+	padding-bottom: 28px
+	h2
+		text-align: center
+		font-family: "Exo2light",sans-serif
+		font-size: 25px
+		line-height: 25px
+		margin-bottom: 27px
+	.service
+		text-decoration: none
+		text-align: center
+		background-color: #FFF
+		display: block
+		position: relative
+		transition: opacity .5s ease
+		max-width: 360px
+		width: 100%
+		height: 100%
+		.img-wrapper
+			display: block
+			img
+				width: 100%
+				display: block
+		&:before
+			content: ''
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			transition: opacity .5s ease
+			background-color: #fff
+		&:hover
+			text-decoration: none
+			&:before
+				opacity: .75
+		&:focus
+			text-decoration: none
+		.context
+			padding: 12px 25px 37px
+		h3
+			color: #000000
+			font-family: "Exo2light",sans-serif
+			font-size: 24px
+			line-height: 24px
+			margin-bottom: 16px
+		p
+			margin: 0
+			padding: 0
+			font-size: 14px
+			line-height: 18px
+			color: #808080
+			font-family: "RobotoThin",sans-serif
+	.std-btn
+		margin-left: auto
+		margin-right: auto
+		display: block
+		margin-top: 28px
+		text-transform: none
+		font-family: "Exo2regular",sans-serif
+		font-size: 17px
+		line-height: 17px
+		max-width: 233px
+		padding: 11px 0
+
+.appointment
+	position: relative
+	padding-top: 23px
+	padding-bottom: 24px
+	border-top: 1px solid #fff
+	background-image: url(../img/appointment-bg.jpg)
+	background-size: cover
+	background-position: center top
+	text-align: center
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0, .78)
+
+.text-section
+	padding-top: 43px
+	h1
+		font-size: 41px
+		line-height: 41px
+		font-family: "RobotoLight",sans-serif
+		margin-bottom: 36px
+	h2
+		font-size: 26px
+		line-height: 26px
+		font-family: "RobotoLight",sans-serif
+		color: $main-color
+		margin-top: 44px
+		margin-bottom: 21px
+	img
+		float: right
+		margin-top: -69px
+		margin-left: 20px
+		margin-bottom: 20px
+	p
+		font-size: 16px
+		line-height: 22px
+		margin: 0
+		margin-bottom: 21px
+
+.main-footer
+	background-color: #f7f7f7
+	border-top: 1px solid #dee1e3
+	padding-top: 24px
+	h3
+		font-size: 22px
+		line-height: 22px
+		font-family: "Exo2lightcondensed",sans-serif
+		margin-bottom: 28px
+	.footer-nav
+		ul
+			display: inline-block
+			margin-right: 57px
+			&:last-child
+				margin-right: 0
+			li
+				margin-bottom: 17px
+				&:last-child
+					margin-bottom: 0
+				a
+					font-family: "Exo2light",sans-serif
+					font-size: 15px
+					line-height: 16px
+					color: #31384a
+					transition: color .5s ease
+					&:hover
+						color: $main-color
+						text-decoration: none
+					&:focus
+						text-decoration: none
+						color: #31384a
+	.contact
+		ul
+			li
+				margin-bottom: 17px
+				&:last-child
+					margin-bottom: 0
+				i
+					margin-right: 15px
+					width: 15px
+				a
+					color: #31384a
+					font-family: "Exo2light",sans-serif
+					font-size: 15px
+					line-height: 16px
+					transition: color .5s ease
+					&:hover
+						color: $main-color
+						text-decoration: none
+					&:focus
+						text-decoration: none
+						color: #31384a
+	.social-icons
+		ul
+			li
+				display: inline-block
+				border-radius: 4px
+				margin-right: 9px
+				overflow: hidden
+				width: 32px
+				height: 32px
+				&:last-child
+					margin-right: 0
+				a
+					width: 32px
+					height: 32px
+					display: block
+					border-radius: 3px
+					overflow: hidden
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						background-color: rgba(255,255,255, .0)
+						transition: background-color .5s ease
+						z-index: 2
+						border-radius: 3px
+					&:hover
+						&:before
+							background-color: rgba(255,255,255, .55)
+	.developers
+		position: absolute
+		bottom: 0
+		a
+			font-size: 14px
+			line-height: 14px
+			font-family: "Exo2extralightcondensed",sans-serif
+			color: #31384a
+	.copyright
+		background-color: #7e7e7e
+		text-align: center
+		padding: 33px 0
+		margin-top: 38px
+		p
+			margin: 0
+			padding: 0
+			color: #fff
+			font-size: 14px
+			line-height: 15px
+			font-family: "RobotoLight",sans-serif
+			text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.4)
