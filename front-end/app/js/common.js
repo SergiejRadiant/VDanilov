@@ -69,7 +69,7 @@ $(function() {
 	/*** mobile menu btn ***/
 
 	/*** owl carousel ***/
-	$('.main-slider').owlCarousel({
+	var owl = $('.main-slider').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    dotsContainer: '.main-slider-dots-container',
@@ -85,6 +85,15 @@ $(function() {
 	            items:1
 	        }
 	    }
+	});
+
+	// Go to the next item
+	$('.main-slider-nav-next').click(function() {
+		owl.trigger('next.owl.carousel');
+	})
+	// Go to the previous item
+	$('.main-slider-nav-prev').click(function() {
+	    owl.trigger('prev.owl.carousel');
 	});
 	/*** owl carousel ***/
 

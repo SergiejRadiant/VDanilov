@@ -214,6 +214,26 @@ ul
 								font-family: "Exo2extralightcondensed",sans-serif
 								padding: 0px
 								margin: 0px
+		.main-slider-nav
+			position: absolute
+			width: 100%
+			top: 46%
+			z-index: 1
+		.main-slider-wrapper
+			position: relative
+			.main-slider-nav-next,
+			.main-slider-nav-prev
+				position: absolute
+				cursor: pointer
+				opacity: .25
+				transition: opacity .5s ease
+				&:hover
+					opacity: .55
+			.main-slider-nav-prev
+				left: -3px
+			.main-slider-nav-next
+				right: -3px
+				transform: rotate(180deg)
 		.main-slider-dots-container
 			text-align: center
 			.owl-dot
