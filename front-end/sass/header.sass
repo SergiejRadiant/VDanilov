@@ -263,3 +263,81 @@ ul
 				b
 					font-weight: normal
 					color: $main-color
+		.std-banner
+			width: 100%
+			display: table
+			position: relative
+			overflow: hidden
+			.banner-bg
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				img
+					display: block
+					width: 100%
+					height: 100%
+			.left-side,
+			.right-side
+				display: table-cell
+				position: relative
+				z-index: 1
+				overflow: hidden
+			.left-side
+				width: 100%
+				vertical-align: top
+				position: relative
+				.context
+					position: relative
+					padding: 35px 45px
+					z-index: 2
+					color: #fff
+					p
+						color: #ccd9e5
+						+kerning(0.3)
+						line-height: 21px
+						margin-bottom: 41px
+					h1
+						font-size: 61px
+						line-height: 62px
+						color: #74fea4
+						font-family: "RobotoLight",sans-serif
+						text-transform: uppercase
+						margin-bottom: 17px
+					h2
+						font-size: 43px
+						line-height: 44px
+						font-family: "RobotoThin",sans-serif
+						text-transform: uppercase
+						margin-bottom: 31px
+					.appointment-btn
+						border-radius: 0px
+						font-size: 17px
+						line-height: 17px
+						max-width: 268px
+						padding-bottom: 12px
+						color: #ccd9e5
+						&:hover
+							background-color: #88857e
+							border-color: #88857e
+							color: #ccd9e5
+				&:before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					background-color: rgba(0,0,0, .61)
+			.right-side
+				min-width: 395px
+				position: relative
+				z-index: 2
+				background-color: rgba(99, 250, 152, .75)
+				vertical-align: bottom
+				.img-wrapper
+					display: block
+					width: 100%
+					img
+						display: block
+						width: 100%
+

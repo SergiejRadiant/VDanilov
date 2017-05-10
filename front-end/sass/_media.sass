@@ -11,6 +11,13 @@
 				ul
 					li
 						margin-right: 25px
+			.std-banner
+				width: 100%
+				display: block
+				.left-side
+					display: block
+				.right-side
+					display: none
 	footer.main-footer
 		.copyright
 			p
@@ -30,7 +37,12 @@
 						a
 							font-size: 17px
 							line-height: 17px
-
+	section.advices
+		.advice-services
+			text-align: center
+			.service
+				&:nth-child(even)
+					margin-right: 0
 
 
 /* Small Devices, Tablets */
@@ -59,6 +71,19 @@
 		.header-footer
 			.main-nav
 				display: none
+			.std-banner
+				.left-side
+					.context
+						padding-top: 20px
+						padding-bottom: 20px
+						padding-left: 10px
+						padding-right: 10px
+						h1
+							font-size: 48px
+							line-height: 49px
+						h2
+							font-size: 38px
+							line-height: 39px
 	section.services
 		.service
 			margin-left: auto
@@ -86,7 +111,16 @@
 			font-size: 14px
 			line-height: 15px
 			margin-top: 10px
-
+	section.advices
+		.advice-services
+			text-align: center
+			.service
+				margin-right: 0
+				display: block
+				width: 100%
+				max-width: 100%
+				&:nth-child(even)
+					margin-right: 0
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -108,9 +142,7 @@
 		-ms-animation: none !important
 		animation: none !important
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -149,6 +181,15 @@
 									font-family: "Exo2extralightcondensed",sans-serif
 									padding: 0px
 									margin: 0px
+			.std-banner
+				.left-side
+					.context
+						h1
+							font-size: 38px
+							line-height: 39px
+						h2
+							font-size: 28px
+							line-height: 29px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
