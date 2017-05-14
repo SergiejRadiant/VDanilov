@@ -26,7 +26,7 @@ body
 	font-size: 14px
 	line-height: 14px
 	font-family: "Exo2light",sans-serif
-	padding: 13px 0
+	padding: 11px 0 13px
 	background-color: $main-color
 	text-align: center
 	color: #fff
@@ -51,10 +51,10 @@ body
 	padding: 10px 0
 	background-color: transparent
 	text-align: center
-	color: #fff
+	color: rgba(255,255,255,.4)
 	border-radius: 4px
 	transition: background-color .5s ease, color .5s ease, border-color .5s ease
-	border: 2px solid #88857e
+	border: 2px solid rgba(255,255,255,.4)
 	.fa
 		font-size: 20px
 		margin-right: 11px
@@ -222,29 +222,34 @@ ul
 			z-index: 1
 		.main-slider-wrapper
 			position: relative
+			overflow: hidden
 			.main-slider-nav-next,
 			.main-slider-nav-prev
 				position: absolute
 				cursor: pointer
 				opacity: .25
-				transition: opacity .5s ease
+				transition: opacity .5s ease, left .3s ease, right .3s ease
 				&:hover
 					opacity: .55
 			.main-slider-nav-prev
-				left: -3px
+				left: -8px
+				&:hover
+					left: -3px
 			.main-slider-nav-next
-				right: -3px
+				right: -8px
 				transform: rotate(180deg)
+				&:hover
+					right: -3px
 		.main-slider-dots-container
 			text-align: center
 			.owl-dot
 				display: inline-block
-				width: 8px
-				height: 8px
+				width: 7px
+				height: 7px
 				background-color: #c9c9c9
 				border-radius: 50%
 				transition: background-color .5s ease
-				margin-right: 5px
+				margin-right: 6px
 				margin-top: 15px
 				cursor: pointer
 				&.active
@@ -255,6 +260,7 @@ ul
 			text-align: center
 			margin-top: 5px
 			margin-bottom: 3px
+			padding-bottom: 13px
 			p
 				margin: 0
 				padding: 0
@@ -338,14 +344,15 @@ ul
 				min-width: 395px
 				position: relative
 				z-index: 2
-				background-color: rgba(99, 250, 152, .75)
+				background-color: rgba(99, 250, 152, .95)
 				vertical-align: bottom
 				.img-wrapper
 					display: block
 					width: 100%
 					img
 						display: block
-						width: 100%
+						width: 98%
+						margin-left: auto
 		.rules
 			background-color: #edf7f1
 			height: 100%
@@ -451,6 +458,7 @@ ul
 		width: 100%
 		margin-top: 7px
 		border-radius: 4px
+		font-family: "RobotoLight",sans-serif
 	textarea
 		width: 100%
 		margin-top: 7px
@@ -460,6 +468,7 @@ ul
 		height: 210px
 		padding-top: 10px
 		padding-bottom: 10px
+		font-family: "RobotoLight",sans-serif
 	.std-btn
 		font-family: "Exo2regular",sans-serif
 		font-size: 17px
