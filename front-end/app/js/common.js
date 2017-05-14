@@ -10,7 +10,6 @@ $(function() {
 	};
 
 	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
@@ -98,5 +97,36 @@ $(function() {
 	    owl.trigger('prev.owl.carousel');
 	});
 	/*** owl carousel ***/
+
+	/*********************************/
+
+	//Яндекс карта
+	ymaps.ready(function () {
+	    var myMap = new ymaps.Map('map', {
+	            center: [55.658510, 37.482268],
+	            zoom: 16,
+	            controls: ['zoomControl']
+	        }, {
+	            searchControlProvider: 'yandex#search'
+	        }),
+	        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+	            hintContent: 'Россия, г. Москва, П-т Вернадского, д.117, м. Юго-Западная',
+	            balloonContent: 'г. Москва, П-т Вернадского, д.117, м. Юго-Западная'
+	        }, {
+	            // Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: '../img/location.png',
+	            // Размеры метки.
+	            iconImageSize: [36, 57],
+	            // Смещение левого верхнего угла иконки относительно
+	            // её "ножки" (точки привязки).
+	            iconImageOffset: [-18, -57]
+	        });
+
+	    myMap.geoObjects.add(myPlacemark);
+	    myMap.behaviors.disable('scrollZoom'); 
+	});
 
 });

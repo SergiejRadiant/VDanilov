@@ -127,8 +127,11 @@
 				max-width: 100%
 				&:nth-child(even)
 					margin-right: 0
-	section.blog-articles
+	section.blog-articles,
+	section.contacts-section,
+	section.my-sertificates
 		border-top: none
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -212,8 +215,20 @@
 				display: block
 				.form-control
 					display: block
-
-
+	section.reviews-section
+		.review
+			padding: 0px
+	section.contacts-section
+		.contacts
+			padding: 21px 15px 34px 15px
+			table
+				tr
+					td
+						line-height: 34px
+						&:last-child
+							padding-left: 18px
+							font-size: 24px
+							line-height: 34px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
