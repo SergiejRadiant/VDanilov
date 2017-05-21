@@ -68,6 +68,11 @@ $(function() {
 	});
 
 	/*** mobile menu btn ***/
+	
+	var d = $(document.createElement("div")).addClass("developers");
+		h = $(document.createElement("a")).attr("href", "http://radiant-studio.ru").text("Сайт разработан - Радиант");
+		$(d).append(h);
+	$(".social-icons").append(d);
 
 	/*** owl carousel ***/
 	var owl = $('.main-slider').owlCarousel({
