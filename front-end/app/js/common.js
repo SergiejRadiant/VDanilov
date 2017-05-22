@@ -17,11 +17,13 @@ $(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+
+			$(".thank-href").trigger('click');
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");
-			}, 1000);
+				$.magnificPopup.close();
+			}, 2500);
 		});
 		return false;
 	});
@@ -104,6 +106,22 @@ $(function() {
 	/*** owl carousel ***/
 
 	/*********************************/
+
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+		
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
 
 	//Яндекс карта
 	ymaps.ready(function () {

@@ -117,7 +117,73 @@ body textarea:required:valid
  		transform: rotate(180deg)
  		background: $main-color
 
+
+.popup-form
+	max-width: 555px
+	width: 100%
+	margin: 50px auto
+	background-color: #FFF
+	border-radius: 5px
+	overflow: hidden
+	font-family: "Exo2extralightcondensed", sans-serif
+	color: #a4a4a4
+	.title
+		text-align: center
+		padding: 10px 15px 16px
+		font-size: 25px
+		line-height: 26px
+		font-family: "Exo2extralightcondensed", sans-serif
+		background-color: #f5f5f5
+		color: #6c6c6c
+		border-bottom: 1px solid #c0c0c0
+	.form-container
+		padding: 11px 25px 30px
+		p
+			text-align: center
+			font-size: 17px
+			color: #6c6c6c
+			line-height: 19px
+			margin: 0
+			b
+				font-weight: normal
+				color: #15af65
+	.form-group
+		display: table
+		width: 100%
+		margin-top: 15px
+		.form-control
+			display: table-cell
+		&.two
+			.form-control:first-child
+				width: 60px
+				padding-right: 28px
+	label
+		cursor: pointer
+	input
+		height: 41px
+		padding-left: 10px
+		padding-right: 10px
+	textarea
+		height: 210px
+		padding: 10px
+		resize: none
+	input,
+	textarea
+		width: 100%
+		display: block
+		border: 1px solid #c0c0c0
+		border-radius: 5px
+		font-size: 16px
+		color: #31384a
+		font-family: "RobotoLight",sans-serif
+	.hint
+		margin-bottom: 25px
+	.std-btn
+		margin-left: auto
+		margin-right: auto
+		display: block
 body
+	background-color: #000
 	.mm-menu.mm-offcanvas
 			z-index: 10
 
@@ -126,6 +192,8 @@ body
 @import "app/libs/font-awesome/css/font-awesome.min"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
 @import "app/libs/font-awesome/css/font-awesome.min"
+@import "app/libs/magnific-popup/dist/magnific-popup"
+@import "app/css/popup-anim"
 
 .services
 	background-color: #dee1e3

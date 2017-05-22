@@ -35,7 +35,8 @@ gulp.task('scripts', function() {
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/OwlCarousel/dist/owl.carousel.min.js',
 		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
-		'./app/libs/jQuery.equalHeights/jquery.equalheights.min.js'
+		'./app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
+		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
