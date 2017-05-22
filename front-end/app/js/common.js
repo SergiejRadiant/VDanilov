@@ -75,7 +75,7 @@ $(function() {
 	$(".social-icons").append(d);
 
 	/*** owl carousel ***/
-	var owl = $('.main-slider').owlCarousel({
+	var owl = $('.owl-carousel').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    dotsContainer: '.main-slider-dots-container',
